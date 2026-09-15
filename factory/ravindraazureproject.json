@@ -1,0 +1,15 @@
+{
+	"name": "ravindraazureproject",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "cc1d47b6-eb8c-4743-b31c-cf6b6a24e62f",
+		"tenantId": "03094966-d3c7-4051-bd65-252757156d7f"
+	}
+}
