@@ -109,7 +109,10 @@
 						"type": "DatasetReference",
 						"parameters": {
 							"container": "ravindra-bronze",
-							"folder": "DimUser_cdc",
+							"folder": {
+								"value": "@{pipeline().parameters.table}_cdc",
+								"type": "Expression"
+							},
 							"file": "cdc.json"
 						}
 					},
@@ -168,7 +171,7 @@
 									"referenceName": "Ravindra_Parquet_Dynamic",
 									"type": "DatasetReference",
 									"parameters": {
-										"container": "ravindra-bronze/DimUser_cdc",
+										"container": "ravindra-bronze",
 										"folder": {
 											"value": "@pipeline().parameters.table",
 											"type": "Expression"
@@ -246,7 +249,10 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"container": "ravindra-bronze",
-										"folder": "DimUser_cdc",
+										"folder": {
+											"value": "@{pipeline().parameters.table}_cdc",
+											"type": "Expression"
+										},
 										"file": "empty.json"
 									}
 								}
