@@ -1,0 +1,12 @@
+{
+	"name": "RavindraAzureSqlSource",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Ravindra_AzureSQL",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}
