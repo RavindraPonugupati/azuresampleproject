@@ -262,7 +262,7 @@
 												"parameters": {
 													"container": "ravindra-bronze",
 													"folder": {
-														"value": "@{item().table}",
+														"value": "@{item().table}_cdc",
 														"type": "Expression"
 													},
 													"file": "empty.json"
