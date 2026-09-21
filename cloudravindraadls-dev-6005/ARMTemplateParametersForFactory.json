@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "cloudravindraadls-dev-6005"
+		},
+		"LS_Ravindra_ADLSGen2_accountKey": {
+			"value": ""
+		},
+		"LS_Ravindra_AzureSQL_password": {
+			"value": ""
+		},
+		"cloud_source_adlsgen2_accountKey": {
+			"value": ""
+		},
+		"clouddata_sink_adlsGen2_accountKey": {
+			"value": ""
+		},
+		"LS_Ravindra_ADLSGen2_properties_typeProperties_url": {
+			"value": "https://ravindrastorageaccount.dfs.core.windows.net/"
+		},
+		"LS_Ravindra_AzureSQL_properties_typeProperties_server": {
+			"value": "ravindraazureserver.database.windows.net"
+		},
+		"LS_Ravindra_AzureSQL_properties_typeProperties_database": {
+			"value": "Ravindra-Azure-Project"
+		},
+		"LS_Ravindra_AzureSQL_properties_typeProperties_userName": {
+			"value": "RavindraAzureadmin"
+		},
+		"cloud_source_adlsgen2_properties_typeProperties_url": {
+			"value": "https://coludravindraadls.dfs.core.windows.net/"
+		},
+		"clouddata_sink_adlsGen2_properties_typeProperties_url": {
+			"value": "https://cloudravindrasinkadls.dfs.core.windows.net/"
+		}
+	}
+}

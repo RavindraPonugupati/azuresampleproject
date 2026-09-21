@@ -1,0 +1,112 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "cloudravindraadls-dev-6005"
+		},
+		"LS_Ravindra_ADLSGen2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'LS_Ravindra_ADLSGen2'"
+		},
+		"LS_Ravindra_AzureSQL_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_Ravindra_AzureSQL'"
+		},
+		"cloud_source_adlsgen2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'cloud_source_adlsgen2'"
+		},
+		"clouddata_sink_adlsGen2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'clouddata_sink_adlsGen2'"
+		},
+		"LS_Ravindra_ADLSGen2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://ravindrastorageaccount.dfs.core.windows.net/"
+		},
+		"LS_Ravindra_AzureSQL_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "ravindraazureserver.database.windows.net"
+		},
+		"LS_Ravindra_AzureSQL_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "Ravindra-Azure-Project"
+		},
+		"LS_Ravindra_AzureSQL_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "RavindraAzureadmin"
+		},
+		"cloud_source_adlsgen2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://coludravindraadls.dfs.core.windows.net/"
+		},
+		"clouddata_sink_adlsGen2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://cloudravindrasinkadls.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "cloudravindraadls-dev-6005_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"LS_Ravindra_ADLSGen2_accountKey": {
+						"value": "[parameters('LS_Ravindra_ADLSGen2_accountKey')]"
+					},
+					"LS_Ravindra_AzureSQL_password": {
+						"value": "[parameters('LS_Ravindra_AzureSQL_password')]"
+					},
+					"cloud_source_adlsgen2_accountKey": {
+						"value": "[parameters('cloud_source_adlsgen2_accountKey')]"
+					},
+					"clouddata_sink_adlsGen2_accountKey": {
+						"value": "[parameters('clouddata_sink_adlsGen2_accountKey')]"
+					},
+					"LS_Ravindra_ADLSGen2_properties_typeProperties_url": {
+						"value": "[parameters('LS_Ravindra_ADLSGen2_properties_typeProperties_url')]"
+					},
+					"LS_Ravindra_AzureSQL_properties_typeProperties_server": {
+						"value": "[parameters('LS_Ravindra_AzureSQL_properties_typeProperties_server')]"
+					},
+					"LS_Ravindra_AzureSQL_properties_typeProperties_database": {
+						"value": "[parameters('LS_Ravindra_AzureSQL_properties_typeProperties_database')]"
+					},
+					"LS_Ravindra_AzureSQL_properties_typeProperties_userName": {
+						"value": "[parameters('LS_Ravindra_AzureSQL_properties_typeProperties_userName')]"
+					},
+					"cloud_source_adlsgen2_properties_typeProperties_url": {
+						"value": "[parameters('cloud_source_adlsgen2_properties_typeProperties_url')]"
+					},
+					"clouddata_sink_adlsGen2_properties_typeProperties_url": {
+						"value": "[parameters('clouddata_sink_adlsGen2_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
