@@ -1,0 +1,12 @@
+{
+	"name": "cloud_source_adlsgen2",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://coludravindraadls.dfs.core.windows.net/",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQEQ1M0Q4OTI5LTYyRjgtNEM4QS1BRjJDLTQ3RDQ4NzQxQTJFM183NGFlM2NiNy1hZWFkLTRlYWUtODAwNi03OWM2YjVlMjQwN2IiDQp9"
+		}
+	}
+}

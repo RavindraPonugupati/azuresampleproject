@@ -1,0 +1,15 @@
+{
+	"name": "cloudravindraadls-dev-6005",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "779ed089-8ff9-4fe0-90c8-d5daa31d87a2",
+		"tenantId": "03094966-d3c7-4051-bd65-252757156d7f"
+	}
+}
